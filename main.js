@@ -15,6 +15,8 @@ let hue = 0;
 canvas = document.querySelector("#canvas");
 ctx = canvas.getContext("2d");
 let counter = 0
+let celCounter = 0
+let celID 
 
 function updateCountdown() {
 	// Calculate the time remaining until the birthday
@@ -23,6 +25,7 @@ function updateCountdown() {
 
 	// Check if the birthday has already passed
 	if (diff < 0) {
+        celID = setInterval(celebrate,2000)
 		countdownEl.textContent = "Happy Birthday مموشة!";
         birth.style.zIndex = 0
 
@@ -57,7 +60,31 @@ function resetBirth(indx){
 }
 
 
+function celebrate(){
+    let wishes = [  "Happy Birthday مموشة!",
+                    "Happy Birthday Bayan!",
+                    "I wish you all the best",
+                    "and hope all your dreams",
+                    "Come True!!",
 
+                ]
+    countdownEl.textContent = wishes[celCounter];
+    
+    celCounter+= 1 
+    if (celCounter == wishes.length){
+        clearInterval(celID)
+    }
+}
+
+function finish(){
+    celID = setInterval(celebrate,2000)
+    countdownEl.textContent = "Happy Birthday مموشة!";
+    birth.style.zIndex = 0
+
+    init();
+
+    clearInterval(intervalId)
+}
 
 function init() {
     countdownEl.textContent = "Happy Birthday مموشة!";
