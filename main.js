@@ -1,6 +1,5 @@
 // Set the date of your friend's birthday (replace with your own date)
-const birthday = new Date(Date.UTC(2023, 2, 30, 0, 0, 0));
-
+const birthday = new Date("2023-03-30T00:00:00Z");
 
 // Get references to the elements on the page
 const countdownEl = document.getElementById("countdown");
