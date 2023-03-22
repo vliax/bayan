@@ -55,7 +55,7 @@ function resetBirth(indx){
                 "Countdown to مفسومة's birthday",
 
                 ]
-    birth.textContent = wishes[(wishes.length - indx) % wishes.length] 
+    birth.textContent = wishes[(wishes.length - indx - 1) % wishes.length] 
         
 }
 
