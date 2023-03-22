@@ -1,4 +1,4 @@
-const birthday = new Date("2023-03-30T00:00:00Z");
+const birthday = new Date("2023-03-29T22:00:00Z");
 
 // Get references to the elements on the page
 const countdownEl = document.getElementById("countdown");
