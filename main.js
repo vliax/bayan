@@ -1,5 +1,4 @@
-// Set the date of your friend's birthday (replace with your own date)
-const birthday = new Date("2023-03-22T00:00:00Z");
+const birthday = new Date("2023-03-30T00:00:00Z");
 
 // Get references to the elements on the page
 const countdownEl = document.getElementById("countdown");
@@ -36,10 +35,25 @@ function updateCountdown() {
 		const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
 		const minutes = Math.floor((diff / 1000 / 60) % 60);
 		const seconds = Math.floor((diff / 1000) % 60);
-
+        resetBirth(days)
 		// Update the countdown element with the remaining time
 		countdownEl.textContent = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 	}
+}
+function resetBirth(indx){
+    let wishes = [
+                "Countdown to the Stupidest girl's special day",
+                "Countdown to the Stupidest girl's special day",
+                "Countdown to the Queen B's special day",
+                "Countdown to the Cutest girl's birthday",
+                "Countdown to the Smartest girl's birthday",
+                "Countdown to Habal's birthday",
+                "Countdown to مموشة's birthday",
+                "Countdown to مفسومة's birthday",
+
+                ]
+    birth.textContent = wishes[(wishes.length - indx) % wishes.length] 
+        
 }
 
 
