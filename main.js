@@ -45,8 +45,8 @@ function updateCountdown() {
 }
 function resetBirth(indx){
     let wishes = [
-                "Countdown to the Stupidest girl's special day",
-                "Countdown to the Stupidest girl's special day",
+                "Stupidest girl's special day is coming ",
+                "Stupidest girl's special day is coming ",
                 "Countdown to the Queen B's special day",
                 "Countdown to the Cutest girl's birthday",
                 "Countdown to the Smartest girl's birthday",
@@ -55,7 +55,7 @@ function resetBirth(indx){
                 "Countdown to مفسومة's birthday",
 
                 ]
-    birth.textContent = wishes[(wishes.length - indx - 1) % wishes.length] 
+    birth.textContent = wishes[(wishes.length - indx) % wishes.length] 
         
 }
 
